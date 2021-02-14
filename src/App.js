@@ -21,7 +21,7 @@ export default function App() {
     const next = items.next();
     if (!next.done) {
       setCurrent(next.value);
-      setCount(count + 1);
+      setCount(prevCounter => prevCounter + 1);
       setHistory([...history, next.value]);
     }
     else {

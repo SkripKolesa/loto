@@ -1,5 +1,6 @@
-﻿export default function Counter({count}){
+﻿import "./Counter.css"
+export default function Counter({count}){
   return(
-    <h1>{count}/90 (:{90 - count})</h1>
+    <h2 className={"Counter"}>{count}/90 (:{90 - count})</h2>
   )
 }
