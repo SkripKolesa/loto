@@ -1,5 +1,5 @@
-﻿export default function Counter(props){
+﻿export default function Counter({count}){
   return(
-    <h1>{props.count}/90 (:{90 - props.count})</h1>
+    <h1>{count}/90 (:{90 - count})</h1>
   )
 }
