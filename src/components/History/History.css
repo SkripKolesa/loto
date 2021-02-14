@@ -1,0 +1,13 @@
+﻿.History {
+  list-style: none;
+  display: flex;
+  width: 190px;
+  flex-wrap:wrap;
+  height: 20rem;
+  overflow: auto;
+}
+
+.History li{
+  padding: 10px;
+  
+}
