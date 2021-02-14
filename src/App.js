@@ -2,6 +2,7 @@ import './App.css';
 import Bochka from "./components/Bochka/Bochka";
 import {makeShuffleRangeIterator} from "./service/ShuffledNumbers";
 import {useState} from "react";
+import Button from "./components/Button/Button";
 
 export default function App(props) {
   const [items, setItems] = useState(makeShuffleRangeIterator());
@@ -14,6 +15,7 @@ export default function App(props) {
     setCurrent(null);
     setCount(0);
     setDone(false);
+    setHistory([]);
   };
   const onNext = e => {
     const next = items.next();
@@ -27,13 +29,13 @@ export default function App(props) {
       alert("DONE");
     }
   };
-  //TODO button, counter, history into separate components
+  //TODO counter, history into separate components
   return (
     <div className={"App"}>
-      <button onClick={onReset}>Reset</button>
+      <Button onClick={onReset}>Reset</Button>
       <Bochka current={current}/>
-      <button onClick={onNext}>Next</button>
-      <h1>{count} из 90 (осталось {90 - count})</h1>
+      <Button onClick={onNext}>Next</Button>
+      <h1>{count}/90 (:{90 - count})</h1>
       <ul className={"history"}>
         {history.map((h, idx) => <li key={idx}>{h}</li>)}
       </ul>
