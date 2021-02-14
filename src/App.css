@@ -1,3 +1,13 @@
 .App {
   
 }
+
+.App .history{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.App .history li{
+  padding: 10px;
+}
